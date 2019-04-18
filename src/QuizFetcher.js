@@ -5,7 +5,7 @@ class QuizFetcher {
     const API_URL = "https://opentdb.com/api.php?amount=10&type=multiple";
     try {
       const response = await axios.get(API_URL);
-      const data = await response.data;
+      const data = response.data;
       return data;
     } catch (error) {
       console.log("データの取得に失敗しました。", error.message);
